@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cardapio.css">
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            position: relative;
+            height: 180vh;
+            width: 99vw;
+            background-size: cover;
+
+        }
+
+        .box {
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #151515;
+            padding: 15px;
+            border-radius: 15px;
+            width: 43%;
+            top: 970px;
+        }
+
+        fieldset {
+            border: 3px solid red;
+        }
+
+        legend {
+            border: 1px #B40404;
+            padding: 10px;
+            text-align: center;
+            background-color: #B40404;
+            border-radius: 8px;
+        }
+
+        .inputBox {
+            position: relative;
+        }
+
+        .inputUser {
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+
+        .labelInput {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .inputUser:focus~.labelInput,
+        .inputUser:valid~.labelInput {
+            top: -20px;
+            font-size: 12px;
+            color: dodgerblue;
+        }
+
+        #botao {
+            background-color: #B40404;
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        #submit:hover {
+            background-image: linear-gradient(to right, rgb(0, 80, 172), rgb(80, 19, 195));
+        }
+
+        select {
+            padding: 4px;
+            font-size: 1em;
+        }
+
+        #texto {
+            padding: 15px;
+            padding-right: 230px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="list">
+        <li class="list-item">
+            <a href="menu.html">
+                <span class="split-text" data-text="MENU">MENU</span>
+            </a>
+        </li>
+        <li class="list-item">
+            <span class="split-text" data-text="CARDÁPIO" style="color: red">CARDÁPIO</span>
+            </a>
+        </li>
+        <li class="list-item">
+            <a href="contato.html">
+                <span class="split-text" data-text="CONTATO">CONTATO</span>
+            </a>
+        </li>
+        <li class="list-item">
+            <a href="erro.html">
+                <span class="split-text" data-text="AVALIE-NOS">AVALIE-NOS</span>
+            </a>
+        </li>
+    </ul>
+
+    <div class="caixa">
+        <section class="menu-container">
+            <ul class="menu-items">
+                <li class="menu-item">
+                    <span class="menu-item-title" style="background-color: red">Catupiry com bacon</span>
+                    <span class="separator"></span>
+                    <span class="menu-item-price">R$ 17</span>
+                    <span class="menu-item-ingredients">Pão da Casa, Molho de Tomate Le Pinguê, Hambúrguer, Catupiry e
+                        Bacon crocante.</span>
+                </li>
+                <li class="menu-item">
+                    <span class="menu-item-title" style="background-color: red">Cheddar</span>
+                    <span class="separator"></span>
+                    <span class="menu-item-price">R$ 20</span>
+                    <span class="menu-item-ingredients">Pão Australiano, Maionese da Casa, Hambúrguer, Cheddar, Cebola
+                        caramelizada e Bacon crocante.</span>
+                </li>
+                <li class="menu-item">
+                    <span class="menu-item-title" style="background-color: red">Cheeseburger kids</span>
+                    <span class="separator"></span>
+                    <span class="menu-item-price">R$ 22</span>
+                    <span class="menu-item-ingredients">Pão e Maionese da Casa, Hambúrguer de 100g e Queijo Muçarela
+                        derretido.</span>
+                </li>
+                <li class="menu-item">
+                    <span class="menu-item-title" style="background-color: red">Duplo bacon</span>
+                    <span class="separator"></span>
+                    <span class="menu-item-price">R$ 26</span>
+                    <span class="menu-item-ingredients">Pão da Casa, Molho de Queijo, dois Hambúrgueres de 100g cada,
+                        Queijo Prato, Ketchup Le Pinguê e Bacon.</span>
+                </li>
+                <li class="menu-item">
+                    <span class="menu-item-title" style="background-color: red">Pinguê dog cheddar</span>
+                    <span class="separator"></span>
+                    <span class="menu-item-price">R$ 26</span>
+                    <span class="menu-item-ingredients">Pão Especial, Maionese da Casa, Salsicha artesanal de carne
+                        suína, Cheddar e Bacon crocante.</span>
+                </li>
+                <li class="menu-item">
+                    <span class="menu-item-title" style="background-color: red">Smash bacon</span>
+                    <span class="separator"></span>
+                    <span class="menu-item-price">R$ 28</span>
+                    <span class="menu-item-ingredients">Pão Especial, Maionese da Casa, Hambúrguer de 100g prensado na
+                        chapa bem quente até criar uma incrível crostinha, Queijo Cheddar e Bacon crocante.</span>
+                </li>
+                <li class="menu-item">
+                    <span class="menu-item-title" style="background-color: red">Quatro queijos</span>
+                    <span class="separator"></span>
+                    <span class="menu-item-price">R$ 30</span>
+                    <span class="menu-item-ingredients">Pão da Casa, Molho de Tomate Le Pinguê, Hambúrguer coberto com
+                        os deliciosos queijos Muçarela, Provolone, Catupiry e Gorgonzola.</span>
+                </li>
+                <li class="menu-item">
+                    <span class="menu-item-title" style="background-color: red">Supreme Burguer</span>
+                    <span class="separator"></span>
+                    <span class="menu-item-price">R$35</span>
+                    <span class="menu-item-ingredients">Pão Especial, Maionese da Casa, Salsicha artesanal de carne
+                        suína, Hambúrguer de 200g, Cheddar e Bacon crocante.
+
+                    </span>
+                </li>
+
+            </ul>
+        </section>
+    </div>
+
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>Faça seu pedido</b></legend>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Nome</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="number" name="telefone" id="telefone" class="inputUser" required>
+                    <label for="telefone" class="labelInput">Telefone</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="endereço" id="endereço" class="inputUser" required>
+                    <label for="endereço" class="labelInput">Endereço</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="ref" id="ref" class="inputUser" required>
+                    <label for="ref" class="labelInput">Referência</label>
+                </div>
+                <br><br>
+                <p>Selecione uma opção:</p><br>
+                <input type="radio" name="retirada"> Entrega<br />
+                <br>
+                <input type="radio" id="retirada" name="retirada" value="retirada">
+                <label for="retirada">Retirada</label>
+                <br><br>
+                <p> Escolhe seu lanche</p>
+                <select>
+                    <option id="l1">Catupiry com Bacon</option>
+                    <option id="l2">Cheddar</option>
+                    <option id="l3">Cheeseburger kids</option>
+                    <option id="l4">Duplo Bacon</option>
+                    <option id="l5">Pinguê Dog Cheddar</option>
+                    <option id="l6">Smash Bacon</option>
+                    <option id="l7">Quatro Queijos</option>
+                    <option id="l8">Supreme Burguer</option>
+                </select>
+                <br><br><br>
+                <div class="inputBox">
+                    <input type="number" name="qnt" id="qnt" class="inputUser" required>
+                    <label for="qnt" class="labelInput">Quantidade</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <textarea id="texto" name="obs" placeholder="Observação"></textarea>
+
+                    <br><br>
+                    <input type="submit" name="botao" id="botao" value="Enviar">
+            </fieldset>
+        </form>
+    </div>
+
+
+    <div id="res">
+
+
+        <p> olá mundo</p>
+
+    </div>
+    <script src="script.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+
+</html>
